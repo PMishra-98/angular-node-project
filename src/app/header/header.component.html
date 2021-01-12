@@ -1,0 +1,68 @@
+<div class="row" style="background-color: #2874f0;">
+  <div class="col-lg-2 col-4 my-1 p-0 text-right">
+    <div class="row ml-4 ">
+      <img class="img-fluid" routerLink="/" routerLinkActive="active"
+        src="https://i.ibb.co/qs8BK6Y/flipkart-plus-4ee2f9.png" style="width: 100px;cursor:pointer;" ></div>
+    <div class="row text-primary ml-1"><a class="text-white ml-3" href="#" style="font-size: 10px;"><i>Explore <span
+            style="color: yellow">Plus
+            <img src="https://i.ibb.co/t2WXyzj/plus-b13a8b.png" style="width: 10px;"></span></i></a></div>
+  </div>
+  <div class="col-lg-4 col-5 mt-2 p-0">
+    <input class="form-control" placeholder="Search for products, brands and more" #search (keyup.enter)="searchShow(search.value)"></div>
+  <div class="col-2 text-white mt-1 text-center p-0 d-none d-lg-block" style="min-height: 16px;">
+    <div class="dropdown">
+      <div class="dropbtn1"> My Account <span>
+          <i id="onhover" style="font-size: 10px;color:lightgrey" class="fa fa-chevron-down"></i></span></div>
+      <div class="dropdown-content">
+        <div *ngFor="let my of myAccount" class="show"><a routerLink="/" routerLinkActive="active">{{my}}</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-1 text-white mt-1  p-0 d-none d-lg-block" style="min-height: 20px;">
+    <div class="dropdown">
+      <div class="dropbtn1" > More <i id="onhover" style="font-size: 10px;color:lightgrey" class="fa fa-chevron-down">
+        </i></div>
+      <div class="dropdown-content">
+        <div *ngFor="let mr of more" class="show"><a routerLink="/" routerLinkActive="active" >{{mr}}</a></div>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 col-3 text-white mt-4  p-0 bor" routerLink="/home/checkout" routerLinkActive="active" style="cursor: pointer;">
+    <i class="fa fa-shopping-cart" ></i>
+    <span id="cartcss" style="min-height: 18px;" *ngIf="total>0">{{total}}</span>
+    &nbsp;&nbsp;<span >Cart</span></div>
+</div>
+<div class="row bg-white" style="color: #212121; min-height: 25 px;font-family: Roboto,Arial,sans-serif;">
+  <div class="col-4 text-center" id="onhover">
+    <div class="dropdown">
+      <div class="dropbtn" > Mobiles <i class="fa fa-chevron-down" id="onhover" style="font-size: 10px;color:lightgrey">
+        </i></div>
+      <div class="dropdown-content">
+        <div *ngFor="let mobile of mobiles" class="show"><a routerLink="/{{mobile.link}}" routerLinkActive={{mobile.active}}>{{mobile.text}}</a></div>
+       
+      </div>
+    </div>
+  </div>
+  <div class="col-4 text-center" id="onhover">
+    <div class="dropdown">
+      <div class="dropbtn"> Laptops
+        <i id="onhover" style="font-size: 10px;color:lightgrey" class="fa fa-chevron-down"></i></div>
+      <div class="dropdown-content">
+        <div *ngFor="let laptop of laptops" class="show"><a routerLink="/{{laptop.link}}" routerLinkActive={{laptop.active}}>{{laptop.text}}</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 text-center" id="onhover">
+    <div class="dropdown">
+      <div class="dropbtn"> Cameras
+        <i id="onhover" style="font-size: 10px;color:lightgrey" class="fa fa-chevron-down"></i></div>
+      <div class="dropdown-content">
+        <div *ngFor="let camera of cameras" class="show"><a routerLink="/{{camera.link}}" routerLinkActive={{camera.active}}>{{camera.text}}</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

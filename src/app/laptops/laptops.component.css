@@ -1,0 +1,16 @@
+.pagecss {
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+    line-height: 32px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #2874f0;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+}
+#namecss:hover{
+   color: blue;
+}

@@ -1,0 +1,209 @@
+<div class="" *ngIf="details2">
+  <div class="row">
+    <div class="col-lg-5 col-12">
+      <div class="row p-0" >
+        <div class="col-lg-2 col-4 text-center" >
+          <div style="height: 64px;width:64px;text-align: center;border-width: 2px solid;"
+            class="row border ml-lg-2 ml-0 {{show==image ? 'border-primary':'border-light'}}" *ngFor="let show of details1.imgList">
+            <div class="col text-center " (click)="showImages(show)">
+              <img style="width:40px; height:50px;"
+                src="{{show}}">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-8 border p-0 text-center">
+          <img class="img-fluid" src="{{image}}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-4"></div>
+        <div class="col-lg-4 col-4 text-sm-center">
+          <button class="btn btn-sm btn-warning text-white" (click)="addToCart(details2.id)">
+            <svg class="_3oJBMI" height="16" viewBox="0 0 16 15" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path class=""
+                d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                fill="#fff"></path>
+            </svg> Add to Cart</button>
+        </div>
+        <div class="col-lg-4 col-4">
+          <button class="btn btn-sm text-white" style="background-color: #fb641b" (click)="byNow(details2.id)"><i class="fa fa-bolt"></i> Buy
+            Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-7 col-12">
+      <div class="row"></div>
+      <div class="row" style="color: #212121;
+          font-size: 18px;
+          font-weight: 400;padding: 0;
+          line-height: 1.4;
+          font-size: inherit;
+          font-weight: inherit;
+          display: inline-block;">
+          <div class="col"> {{details2.name}}</div>
+          </div>
+          <div class="row">
+          <div class="col">
+          <span  style="line-height: normal;
+          display: inline-block;
+          color: #fff;
+          padding: 2px 4px 2px 6px;
+          border-radius: 3px;
+          font-weight: 500;
+          font-size: 12px;
+          vertical-align: middle;
+          background-color: #388e3c">
+          <strong>{{details2.rating}}&nbsp;
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg=="></strong></span> &nbsp;<span 
+           class="text-muted" style="font-size:14px;font-weight: 500;">{{details2.ratingDesc}}</span> &nbsp;&nbsp;<!----><span >
+           <img class="img-fluid" src="https://i.ibb.co/XCQBqSr/fa-8b4b59.png" style="width: 70px;"></span>
+           </div>
+           </div>
+      
+           <div class="row mt-2">
+           <div class="col" style="font-size: 28px;
+          vertical-align: sub;font-weight:500"> ₹{{details2.price}} &nbsp; 
+          <span style="text-decoration: line-through;
+          font-size: 16px;
+          color: #878787;">₹{{details2.prevPrice}}</span>&nbsp;
+          <span style="color: #388e3c;
+          font-size: 16px;font-weight: 500;">18%</span>
+          </div>
+          </div>
+      
+          <div class="row">
+          <div class="col" style="font-size: 16px;
+          margin-left: 12px;
+          vertical-align: middle;font-weight: 500;
+          color: black;"> Available Offers </div>
+          </div>
+      
+          <div class="row">
+          <div class="col-12">
+          <img style="height: 18px;width:18px" src="https://i.ibb.co/zZCY6nY/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png">&nbsp;
+          <span style="color: #212121;
+          font-weight: 500;
+          padding-right: 4px;font-size:14px">Bank Offer</span>&nbsp;
+          <span style="font-size: 14px;">10% Cashback* on HDFC Bank Debit Cards</span>
+           </div>
+           <div class="col-12">
+           <img  style="height: 18px;width:18px" src="https://i.ibb.co/zZCY6nY/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png">&nbsp;<span 
+           style="color: #212121;
+          font-weight: 500;
+          padding-right: 4px;font-size:14px">Bank Offer</span>&nbsp;<span 
+           style="font-size: 14px;">5% Unlimited Cashback on Flipkart Axis Bank Credit Card</span>
+           </div>
+           <div class="col-12">
+           <img style="height: 18px;width:18px" src="https://i.ibb.co/zZCY6nY/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png">&nbsp;<span 
+           style="color: #212121;
+          font-weight: 500;
+          padding-right: 4px;font-size:14px">Bank Offer</span>&nbsp;<span 
+           style="font-size: 14px;">5% Instant Discount on EMI with ICICI Bank Credit and Debit Cards</span>
+           </div>
+           <div class="col-12">
+           <img style="height: 18px;width:18px" src="https://i.ibb.co/zZCY6nY/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png">&nbsp;<span 
+           style="color: #212121;
+          font-weight: 500;
+          padding-right: 4px;font-size:14px">Bank Offer</span>&nbsp;<span 
+           style="font-size: 14px;">Extra 5% off* with Axis Bank Buzz Credit Card</span>
+           </div>
+           <div class="col-12">
+           <img style="height: 18px;width:18px" src="https://i.ibb.co/PgZY1JF/f3bae257-60c1-4ef5-960a-1d8170ea7a42.png">&nbsp;<span 
+           style="color: #212121;
+          font-weight: 500;
+          padding-right: 4px;font-size:14px">Bank Offer</span>&nbsp;<span 
+           style="font-size: 14px;">Get upto ₹10800 off on exchange</span>
+           </div>
+           <div class="col-12">
+           <img style="height: 18px;width:18px" src="https://i.ibb.co/zZCY6nY/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png">&nbsp;<span 
+           style="color: #212121;
+          font-weight: 500;
+          padding-right: 4px;font-size:14px">Bank Offer</span>&nbsp;<span 
+           style="font-size: 14px;">Special Price</span>
+           </div>
+           <div class="col-12">
+           <img style="height: 18px;width:18px" src="https://i.ibb.co/zVRyyTn/49f16fff-0a9d-48bf-a6e6-5980c9852f11.png">&nbsp;<span 
+           style="color: #212121;
+          font-weight: 500;
+          padding-right: 4px;font-size:14px">Bank Offer</span>&nbsp;<span 
+           style="font-size: 14px;">No Cost EMI</span>
+           </div>
+           </div>
+           <div class="row mt-2">
+           <div class="col-lg-1 col-3 border text-center ml-2" *ngIf="details1.brandImg">
+           <img style="width: 38px;height:30px" src="{{details1.brandImg}}" >
+           </div>
+           <div class="col-1 d-none d-lg-block" style="font-weight: 500; 
+           color: #878787;
+           width: 110px;
+           padding-right: 10px;
+           float: left;font-size: 14px" *ngIf="!details1.brandImg"> Warranty </div>
+           <div  class="col-8 ml-3 d-none d-lg-block" style="font-size: 14px"> {{details2.details[details2.details.length-1]}}</div>
+           </div>
+           <div  class="row mt-2">
+           <div class="col-1 d-none d-lg-block" style="font-weight: 500;
+          color: #878787;
+          width: 110px;
+          padding-right: 10px;
+          float: left;font-size: 14px"> Highlights </div>
+          <div class="col-5 d-none d-lg-block">
+           <ul><li 
+           style="font-size: 14px;
+          color: grey;
+          line-height: 1.4;" *ngFor="let d of details2.details"><span 
+           style="color: black">{{d}} </span></li></ul>
+           </div>
+           <div class="col-2 d-none d-lg-block" style="font-weight: 500;
+          color: #878787;
+          width: 110px;
+          padding-right: 10px;
+          float: left;font-size: 14px"> Easy Payment Options </div>
+          <div class="col-4 d-none d-lg-block"><ul 
+           style="font-size: 14px;
+          color: grey;
+          line-height: 1.4;">
+          <li>
+          <span style="color: black">No cost EMI NaN/month</span>
+          </li>
+          <li>
+          <span style="color: black">Debit/Flipkart EMI available</span></li>
+          <li>
+          <span style="color: black">Cash on Delivery</span></li>
+          <li>
+          <span style="color: black">Net Banking &amp; Credit/Debit/ATM Card</span></li>
+          </ul>
+          </div>
+          </div>
+          <div  class="row">
+          <div class="col-lg-1 col-3" style="font-weight: 500;
+          color: #878787;
+          width: 110px;
+          padding-right: 10px;
+          float: left;font-size: 14px"> Seller </div>
+          <div class="col-lg-9 col-9"><span 
+           style="color: #2874f0;font-size: 14px;font-weight: 500;">SuperComNet&nbsp;&nbsp;</span><span 
+           style="line-height: normal;
+          display: inline-block;
+          color: #fff;
+          padding: 2px 4px 2px 6px;
+          font-weight: 500;
+          font-size: 12px;
+          border-radius:4px;
+          background-color:#2874f0">4.2 &nbsp;
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg=="></span>
+          <ul  class="d-none d-lg-block">
+          <li style="font-size: 14px;
+          color: grey;
+          line-height: 1.4;"> 10 Day replacement </li>
+          </ul>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col">
+          <img class="img-fluid" src="https://i.ibb.co/j8CMRbn/CCO-PP-2019-07-14.png" style="width: 300px;height:85px">
+           </div>
+           </div>
+           
+    </div>
+  </div>

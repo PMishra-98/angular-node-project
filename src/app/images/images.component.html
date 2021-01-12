@@ -1,0 +1,12 @@
+  <div class="row">
+       <div class="col mx-4 mb-1">
+        <ngb-carousel>
+          <ng-template ngbSlide *ngFor="let  image of images" >
+            <img src="{{image.img}}" alt="Random first slide" class="d-block w-100 img" routerLink="/{{image.link}}" routerLinkActive="active" >
+          </ng-template>
+        </ngb-carousel>
+       </div>
+      </div>
+     
+     
+      

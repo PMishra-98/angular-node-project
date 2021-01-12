@@ -1,0 +1,100 @@
+<div style="background-color: lightgrey;">
+   <div class="row  mt-2" style="font-size: 1rem;">
+      <div class="col-lg-8 col-12 bg-white ml-4 mr-1 mt-2">
+         <div class="row border-bottom">
+            <div class="col-6 mt-2" style="font-size: 20px;
+            line-height: 56px;
+           padding: 0 24px;
+           font-weight: 500;"> My Cart ({{total}})</div>
+         </div>
+         <div *ngIf="cartData">
+            <div class="row mt-1 bg-white" *ngFor="let show of cartData; index as i">
+               <div class="col-lg-2 col-4">
+                  <div class="row">
+                     <div class="col text-center"><img style="width:55px;height: 95px;" src={{show.img}}></div>
+                  </div>
+                  <div class="row mt-1">
+                     <div class="col-12 text-center">
+                        <button class="btn btn-sm" style="background-color: white;
+             border-color: #e0e0e0;
+             cursor: auto; border-radius: 50%;cursor: pointer;font-size: 12px;" (click)="remove(i)" [disabled]="show.count==1"> - </button>
+                        <!-- <span  id="rect">{{count}}</span>-->
+                        <button class="btn btn-sm mx-1" style="background-color: white;
+            border-color: #e0e0e0; border-radius: 3px;font-size: 14px;">{{show.count}}</button>
+                        <button class="btn btn-sm" style="background-color: white;
+            border-color: #e0e0e0;
+             cursor: auto;border-radius: 50%;font-size: 12px;" (click)="add(i)"> + </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-5 col-4">
+                  <div class="row">
+                     <div class="col" style="font-size: 16px;
+                 color: #212121;"> {{show.name}}
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col" style="color: #878787;
+              font-size: 14px;"> {{show.brand}} &nbsp;&nbsp;
+                        <span><img class="img-fluid" src="https://i.ibb.co/XCQBqSr/fa-8b4b59.png"
+                              style="width: 70px;"></span>
+                     </div>
+                  </div>
+                  <div class="row mt-2">
+                     <div class="col" style="font-weight: 500;"> ₹{{show.price}} &nbsp; <span style="text-decoration: line-through;
+             font-size: 16px;
+              color: #878787;">₹{{show.prevPrice}}</span>&nbsp;<span style="color: #388e3c;
+              font-size: 16px;font-weight: 500;">{{show.discount}}%</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-4">
+                  <div class="row">
+                     <div class="col" style="font-size:14px"> Delivery in 2 days | Free <span
+                           style="text-decoration: line-through;">₹40</span>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col" style="font-size: 12px;color : gray;"> 10 Days Replacement Policy </div>
+                  </div>
+               </div>
+               <hr>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-lg-3 col-12  ml-1 mt-2">
+         <div class="row bg-white"  style="font-size: 20px;">
+            <div class="col">
+               <div class="row border-bottom" style="font-size: 18px;font-weight: 500;
+           color: #878787;
+           min-height: 47px;">
+                  <div class="col pt-2">PRICE DETAILS</div>
+               </div>
+               <div class="row pt-2 pb-2">
+                  <div class="col-6">Price({{total}} items)</div>
+                  <div class="col-6 text-right">₹{{amount}}</div>
+               </div>
+               <div class="row pt-2 pb-2">
+                  <div class="col-6"> Delivery </div>
+                  <div class="col-6 text-success text-right"> FREE </div>
+               </div>
+               <div class="row pt-2 pb-2" style="font-weight: 500;border-top: 1px dashed e0e0e0;font-size: 18px;">
+                  <div class="col-6"> Total Payable </div>
+                  <div class="col-6 text-right">₹{{amount}}</div>
+               </div>
+            </div>
+         </div>
+         <div class="row mt-2">
+            <div class="col-1">
+               <img src="https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/shield_435391.svg" style="width: 30px;">
+            </div>
+            <div class="col-9 ml-1 " style="font-size: 16px;
+  text-align: left;font-weight: 500;
+  display: inline-block;
+  color: #878787;"> Safe and Secure Payments.Easy returns.100% Authentic products.
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
